@@ -1,0 +1,17 @@
+{
+  "name": "stopandstair",
+  "version": "1.0.0",
+  "description": "Load image. Find width and height of riser.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick Feuer",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "http": "^0.0.0",
+    "https": "^1.0.0",
+    "socket.io": "^2.0.3"
+  }
+}

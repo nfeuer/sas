@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sandbox</title>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <style> body {padding: 0; margin: 0;} </style>
+  </head>
+  <body>
+    
+      <div id="canvas">
+
+      </div>
+      <div id="wrapper">
+        <div id="interface">
+          <button id="change" onclick="change();">Change</button>
+          <button id="rotate" onclick="rotateA();">Rotate</button>
+          <button id="flip" onclick="flip();">Ratio</button>
+          <button id="select" onclick="selectA();">Select</button>
+          <input id="threshold" placeholder="Threshold [0-1] default 0.35" />
+        </div>
+      </div>
+      
+      
+
+    
+  </body>
+</html>

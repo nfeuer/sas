@@ -1,0 +1,30 @@
+
+
+#canvas {
+   width: 100%;
+   float: left;
+}
+
+canvas {
+   margin: auto;
+   padding-top: 6%;
+   display: block;
+}
+
+button {
+   display: inline-block;
+}
+
+input {
+   display: inline-block;
+}
+
+#wrapper {
+   width: 100%;
+   float: left;
+}
+
+#interface {
+   margin: auto;
+}
+
