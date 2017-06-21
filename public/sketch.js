@@ -103,7 +103,59 @@ function mousePressed() {
       return false;
 }
 
+function touchStarted() {
+      var tt,bt,rt,lt;
+      var mx = pmouseX,my = pmouseY-offset_y;
+      console.log(mx,my);
+
+      if(a.activated) {
+            tt = a.top();
+            bt = a.bottom();
+            rt = a.right();
+            lt = a.left();
+            if(a.check()) {
+                  posx = mx;
+                  posy = my;
+                  a.calc();
+                  c = true;
+            } else if(mx >= tt.x - tt.r && mx <= tt.x + tt.r && my >= tt.y - tt.r && my <= tt.y + tt.r) { //Top
+                  posx = mx;
+                  posy = my;
+                  a.calc();
+                  t = true;
+            } else if(mx >= bt.x - bt.r && mx <= bt.x + bt.r && my >= bt.y - bt.r && my <= bt.y + bt.r) { //Bottom
+                  posx = mx;
+                  posy = my;
+                  a.calc();
+                  b = true;
+            } else if(mx >= rt.x - rt.r && mx <= rt.x + rt.r && my >= rt.y - rt.r && my <= rt.y + rt.r) { //Right
+                  posx = mx;
+                  posy = my;
+                  a.calc();
+                  r = true;
+            } else if(mx >= lt.x - lt.r && mx <= lt.x + lt.r && my >= lt.y - lt.r && my <= lt.y + lt.r) { //Left
+                  posx = mx;
+                  posy = my;
+                  a.calc();
+                  l = true;
+            }
+      }
+      
+
+      return false;
+}
+
 function mouseReleased() {
+      c = false;
+      t = false;
+      b = false;
+      r = false;
+      l = false;
+
+      return false;
+}
+
+function touchEnded() {
       c = false;
       t = false;
       b = false;
@@ -115,6 +167,22 @@ function mouseReleased() {
 
 function mouseDragged() {
       
+      if(c) {
+            a.move();
+      } else if(t) {
+
+      } else if(b) {
+            
+      } else if(r) {
+            
+      } else if(l) {
+            
+      }
+
+      return false;
+}
+
+function touchMoved() {
       if(c) {
             a.move();
       } else if(t) {
